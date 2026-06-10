@@ -37,7 +37,7 @@ export default function ChatWidget() {
         {
           id: '1',
           sender: 'bot',
-          text: 'Hi! Welcome to Nice Property Management. Is there anything I can assist you with?',
+          text: 'Hi! Welcome to Sterling & Son. Is there anything I can assist you with?',
           options: ['Yes', 'Not now']
         }
       ]);
@@ -80,9 +80,11 @@ export default function ChatWidget() {
     setMessages(prev => {
       const newMessages = [...prev];
       // remove options from previous bot message if they exist
-      const lastMsg = newMessages[newMessages.length - 1];
-      if (lastMsg && lastMsg.sender === 'bot') {
-        delete lastMsg.options;
+      const lastMsgIndex = newMessages.length - 1;
+      if (lastMsgIndex >= 0 && newMessages[lastMsgIndex].sender === 'bot') {
+        const updatedMsg = { ...newMessages[lastMsgIndex] };
+        delete updatedMsg.options;
+        newMessages[lastMsgIndex] = updatedMsg;
       }
       return [...newMessages, { id: Date.now().toString(), sender: 'user', text }];
     });
@@ -183,16 +185,15 @@ export default function ChatWidget() {
             transition={{ type: 'spring', damping: 25, stiffness: 220 }}
             className="fixed bottom-20 right-4 sm:right-6 w-[calc(100vw-2rem)] xs:w-[320px] sm:w-[360px] h-[500px] max-h-[calc(100vh-100px)] bg-[#F3F4F6] rounded-2xl shadow-2xl overflow-hidden flex flex-col z-50 text-left border border-black/5"
           >
-            {/* Header: Dark Blue background */}
-            <div className="bg-[#004B87] p-4 flex items-center justify-between text-white rounded-t-2xl">
+            {/* Header: Dark background */}
+            <div className="bg-[#1D1D1F] p-4 flex items-center justify-between text-white rounded-t-2xl">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center p-1 border border-white/20">
-                  <img src="https://images.unsplash.com/photo-1560518884-ce5882228a4b?auto=format&fit=crop&q=80&w=150&h=150" alt="Logo" className="w-full h-full object-cover rounded opacity-0 absolute" />
-                  <span className="font-display font-bold text-lg text-white">NP</span>
+                  <span className="font-display font-bold text-lg text-white tracking-widest">S&S</span>
                 </div>
                 <div className="space-y-0.5">
                   <h4 className="text-sm font-bold tracking-tight text-white leading-none">
-                    Nice Genie
+                    Sterling Support
                   </h4>
                   <p className="text-[10px] text-white/80 font-medium">
                     Typically replies in seconds
@@ -215,7 +216,7 @@ export default function ChatWidget() {
                   <div 
                     className={`max-w-[85%] px-4 py-3 text-[13px] leading-relaxed shadow-sm ${
                       msg.sender === 'user' 
-                        ? 'bg-[#E2FADB] text-[#1D1D1F] rounded-2xl rounded-tr-sm' 
+                        ? 'bg-[#E5E5EA] text-[#1D1D1F] rounded-2xl rounded-tr-sm' 
                         : 'bg-white text-[#1D1D1F] rounded-2xl rounded-tl-sm border border-black/5'
                     }`}
                   >
@@ -227,9 +228,10 @@ export default function ChatWidget() {
                     <div className="mt-3 flex flex-wrap gap-2 max-w-[90%]">
                       {msg.options.map((opt, i) => (
                         <button
+                          type="button"
                           key={i}
                           onClick={() => handleOptionClick(opt)}
-                          className="border border-[#004B87] text-[#004B87] bg-white hover:bg-[#F0F7FF] px-4 py-1.5 rounded-full text-[13px] transition font-medium cursor-pointer"
+                          className="border border-[#1D1D1F] text-[#1D1D1F] bg-white hover:bg-[#F5F5F7] px-4 py-1.5 rounded-full text-[13px] transition font-medium cursor-pointer"
                         >
                           {opt}
                         </button>
@@ -289,7 +291,7 @@ export default function ChatWidget() {
       {/* FLOATING TRIGGER BUTTON */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[#004B87] hover:bg-[#003866] text-white p-4 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer z-50 relative"
+        className="bg-[#1D1D1F] hover:bg-neutral-800 text-white p-4 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer z-50 relative"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (

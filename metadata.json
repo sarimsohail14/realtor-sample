@@ -1,0 +1,6 @@
+{
+  "name": "Real Estate Agent Website",
+  "description": "A professional, ultra-minimal, Apple-inspired real estate portfolio for buying, selling, and contacting a luxury-focused real estate agent, with dynamic valuation and enquiry forms synced with n8n and webhook automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -10,7 +10,7 @@ import { AGENT_INFO } from './data';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
-import WebhookSettings from './components/WebhookSettings';
+
 import Home from './pages/Home';
 import Buy from './pages/Buy';
 import Sell from './pages/Sell';
@@ -101,8 +101,7 @@ export default function App() {
       {/* PREMIUM CHAT WIDGET INTEGRATION (DIRECT WEBHOOK COMPLIANT) */}
       <ChatWidget />
 
-      {/* DYNAMIC n8n WEBHOOK DEVELOPMENT & AUDIT TOOL */}
-      <WebhookSettings />
+
 
     </div>
   );

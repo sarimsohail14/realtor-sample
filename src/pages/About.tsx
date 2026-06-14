@@ -138,7 +138,7 @@ export default function About({ setActivePage }: AboutProps) {
                 Redefining the standard of luxury property curation.
               </h2>
               <p className="text-[#6E6E73] leading-relaxed mb-6">
-                Ananya holds degrees in Fine Art Preservation and Real Property Economics. Her unique technical background enables her to evaluate properties through both deep artistic appreciation and structured portfolio risk models.
+                Om Prakash studied property economics and art preservation. This background helps him evaluate homes based on both their artistic design and their investment value.
               </p>
               <ul className="space-y-4">
                 {['MahaRERA Certified Advisory', 'Architectural Pedigree Reviews', 'Off-Market Network Access'].map((item, i) => (
@@ -172,7 +172,7 @@ export default function About({ setActivePage }: AboutProps) {
               {[1, 2, 3, 4].map((i) => (
                 <div key={`c1-${i}`} className="bg-[#FAFAFA] border border-neutral-100 p-8 rounded-3xl w-full max-w-[320px] shadow-sm">
                   <p className="text-[#1D1D1F] leading-relaxed mb-6">
-                    "The level of discretion and market intelligence Ananya brings is unmatched. We secured our property entirely off-market."
+                    "The level of discretion and market intelligence Om Prakash brings is unmatched. We secured our property entirely off-market."
                   </p>
                   <div className="flex items-center gap-4">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150" alt="Michael R." className="w-10 h-10 object-cover rounded-full shadow-sm" />
@@ -248,7 +248,7 @@ export default function About({ setActivePage }: AboutProps) {
               >
                 Initiate Consultation
               </button>
-              <a href="tel:08001234567" className="bg-transparent text-white border border-white/20 hover:bg-white/10 px-8 py-3.5 rounded-xl font-bold transition w-full sm:w-auto">
+              <a href={`tel:${AGENT_INFO.phone}`} className="bg-transparent text-white border border-white/20 hover:bg-white/10 px-8 py-3.5 rounded-xl font-bold transition w-full sm:w-auto">
                 Call Us Now
               </a>
             </div>

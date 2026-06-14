@@ -60,7 +60,7 @@ export default function Contact() {
             Contact Our <span className="text-[#A0AAB5]">Advisors.</span>
           </h1>
           <p className="text-[#6E6E73] max-w-2xl mx-auto text-lg leading-relaxed">
-            Discuss premium asset acquisitions, schedule home valuation listings, or establish non-disclosure representation agreements.
+            Talk to us about buying a home, get a free price estimate for your property, or discuss private options.
           </p>
         </ScrollReveal>
       </section>
@@ -73,7 +73,14 @@ export default function Contact() {
               <MapPin className="text-[#1D1D1F] w-5 h-5" />
             </div>
             <h4 className="font-display font-bold text-[#1D1D1F] mb-2 text-lg">Headquarters</h4>
-            <p className="text-[#6E6E73] text-sm leading-relaxed">Altamount Road, Cumballa Hill<br/>Mumbai, 400026</p>
+            <a 
+              href="https://jsdl.in/DT-51AI2UI6MM2" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#6E6E73] text-sm leading-relaxed hover:text-[#1D1D1F] transition hover:underline block"
+            >
+              1st Floor, Shristi Complex, Opposite Santevita Hospital, Old H.B Road, Firayalal Chowk, Ranchi - 834001, Jharkhand
+            </a>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2} className="bg-white rounded-3xl p-8 border border-neutral-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300">
@@ -98,7 +105,7 @@ export default function Contact() {
               <CheckCircle className="text-[#1D1D1F] w-5 h-5" />
             </div>
             <h4 className="font-display font-bold text-[#1D1D1F] mb-2 text-lg">Licensed</h4>
-            <p className="text-[#6E6E73] text-sm leading-relaxed">MahaRERA Reg<br/>#A51900000021</p>
+            <p className="text-[#6E6E73] text-sm leading-relaxed">RERA Registered<br/>Agent</p>
           </ScrollReveal>
         </div>
       </section>

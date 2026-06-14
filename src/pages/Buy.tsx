@@ -106,12 +106,12 @@ export default function Buy({ filters, setFilters, onEnquiryClick, onViewPropert
                 className="w-full pl-3 pr-8 py-2 bg-transparent text-[#1D1D1F] focus:outline-none appearance-none font-medium cursor-pointer"
               >
                 <option value="">All Locations</option>
-                <option value="Malabar Hill">Malabar Hill</option>
-                <option value="Koramangala">Koramangala</option>
-                <option value="Lutyens' Delhi">Lutyens' Delhi</option>
-                <option value="Worli Sea Face">Worli Sea Face</option>
-                <option value="Jubilee Hills">Jubilee Hills</option>
-                <option value="ECR Beachfront">ECR Beachfront</option>
+                <option value="Kanke">Kanke</option>
+                <option value="Bariatu">Bariatu</option>
+                <option value="Morabadi">Morabadi</option>
+                <option value="Lalpur">Lalpur</option>
+                <option value="Argora">Argora</option>
+                <option value="Harmu">Harmu</option>
               </select>
               <MapPin className="absolute right-2.5 top-2.5 w-3.5 h-3.5 text-[#6E6E73] pointer-events-none" />
             </div>

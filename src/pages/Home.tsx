@@ -39,7 +39,7 @@ const customTestimonialsList = [
     role: "Customer Support Lead"
   },
   {
-    text: "Sterling's command of off-market listings and high-consequence asset trade is unparalleled. Highly recommended for elite level transactions.",
+    text: "Ranchi Brothers Estate's command of off-market listings and high-consequence asset trade is unparalleled. Highly recommended for elite level transactions.",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
     name: "Omar Raza",
     role: "CEO"
@@ -63,13 +63,13 @@ const customTestimonialsList = [
     role: "Marketing Director"
   },
   {
-    text: "Ananya and her team secured off-market deals that were otherwise completely inaccessible. Absolute lock-and-key discretion throughout.",
+    text: "Om Prakash and his team secured off-market deals that were otherwise completely inaccessible. Absolute lock-and-key discretion throughout.",
     image: "https://randomuser.me/api/portraits/women/8.jpg",
     name: "Sana Sheikh",
     role: "Sales Manager"
   },
   {
-    text: "Using Sterling's private buyer catalog, our asset acquisition of the Alibaug beach villa was perfect. An exceptional masterclass of white-glove brokerage.",
+    text: "Using Ranchi Brothers Estate's private buyer catalog, our asset acquisition of the Alibaug beach villa was perfect. An exceptional masterclass of white-glove brokerage.",
     image: "https://randomuser.me/api/portraits/men/9.jpg",
     name: "Hassan Ali",
     role: "E-commerce Manager"
@@ -141,7 +141,7 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
               Find Your Perfect Home
             </h1>
             <p className="text-sm sm:text-base text-neutral-200 font-light max-w-2xl mx-auto leading-relaxed">
-              Experience Southern California's finest private collection of architectural masterworks, custom estates, and off-market parcels.
+              Experience Ranchi and India's finest private collection of architectural masterworks, custom estates, and off-market parcels.
             </p>
           </motion.div>
 
@@ -166,10 +166,12 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
                   className="w-full bg-transparent text-xs text-[#1D1D1F] focus:outline-none appearance-none font-bold cursor-pointer"
                 >
                   <option className="text-[#1D1D1F]" value="">All Areas</option>
-                  <option className="text-[#1D1D1F]" value="Beverly Hills">Beverly Hills</option>
-                  <option className="text-[#1D1D1F]" value="Malibu Cove">Malibu Cove</option>
-                  <option className="text-[#1D1D1F]" value="Bel Air">Bel Air</option>
-                  <option className="text-[#1D1D1F]" value="Pacific Palisades">Pacific Palisades</option>
+                  <option className="text-[#1D1D1F]" value="Kanke">Kanke</option>
+                  <option className="text-[#1D1D1F]" value="Bariatu">Bariatu</option>
+                  <option className="text-[#1D1D1F]" value="Morabadi">Morabadi</option>
+                  <option className="text-[#1D1D1F]" value="Lalpur">Lalpur</option>
+                  <option className="text-[#1D1D1F]" value="Argora">Argora</option>
+                  <option className="text-[#1D1D1F]" value="Harmu">Harmu</option>
                 </select>
               </div>
             </div>
@@ -585,14 +587,14 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
             {/* Left Sticky Column */}
             <div className="lg:col-span-5 lg:sticky lg:top-24 space-y-6">
               <span className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#B08968] block">
-                / The Sterling Standard
+                / The Ranchi Brothers Standard
               </span>
               <h2 className="text-4xl md:text-5xl font-display font-bold tracking-tightest leading-[1.1] text-[#1D1D1F] max-w-md">
                 Why Clients Choose Us.
               </h2>
               <div className="w-12 h-[1px] bg-[#B08968]" />
               <p className="text-sm text-[#6E6E73] leading-relaxed font-light max-w-sm">
-                We redefine premium real estate acquisitions, ensuring absolute anonymity, curated off-market portfolios, and bespoke advisory at every step.
+                We make buying luxury homes simple and secure. We offer private property lists, full confidentiality, and expert guidance at every step.
               </p>
               
               <div className="hidden lg:block pt-8">
@@ -754,21 +756,21 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
       <section className="py-24 md:py-32 bg-white px-6 md:px-12">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-2 max-w-xl mx-auto">
-            <span className="text-[11px] uppercase tracking-widest font-bold text-[#6E6E73]">
-              Private Regions
-            </span>
+            <div className="inline-block bg-[#FFF0EE] text-[#FF5A5F] px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2">
+              Top Locations
+            </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tightest text-[#1D1D1F]">
-              Areas We Serve.
+              Popular Localities in Ranchi
             </h2>
             <p className="text-xs text-[#6E6E73] leading-relaxed">
-              Serving the absolute premium sub-markets of Southern California.
+              Discover the most sought-after neighborhoods for your next home
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {NEIGHBORHOODS.map((area, idx) => (
               <ScrollReveal key={area.id} delay={idx * 0.1}>
-                <div className="group relative rounded-xl overflow-hidden aspect-3/4 shadow-sm hover:shadow-lg transition-all duration-500">
+                <div className="group relative rounded-xl overflow-hidden aspect-[4/3] shadow-sm hover:shadow-lg transition-all duration-500">
                   <img
                     src={area.image}
                     alt={area.name}
@@ -891,8 +893,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
             <ScrollReveal className="w-full" direction="left">
               <div className="relative rounded-2xl overflow-hidden shadow-xs h-full min-h-[400px] lg:min-h-[500px] flex flex-col justify-end">
                 <img
-                  src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop"
-                  alt="Modern Luxury Kitchen design"
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
+                  alt="Modern Luxury Real Estate"
                   className="absolute inset-0 w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

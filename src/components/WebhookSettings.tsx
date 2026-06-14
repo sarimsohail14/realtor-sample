@@ -7,8 +7,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Settings, Check, Radio, Copy, Server, AlertCircle } from 'lucide-react';
 
-const LOCAL_STORAGE_KEY = 'sterling_n8n_webhook_url';
-const LOCAL_LOGS_KEY = 'sterling_webhook_logs';
+const LOCAL_STORAGE_KEY = 'ranchibrothers_n8n_webhook_url';
+const LOCAL_LOGS_KEY = 'ranchibrothers_webhook_logs';
 
 export function getWebhookUrl(): string {
   if (typeof window === 'undefined') return '';
@@ -66,7 +66,7 @@ export async function sendWebhookData(data: any, type: 'enquiry' | 'valuation' |
         ...data,
         form_type: type,
         submitted_at: new Date().toISOString(),
-        site_source: "Sterling Luxury Real Estate Portal"
+        site_source: "Ranchi Brothers Estate Portal"
       }),
     });
 

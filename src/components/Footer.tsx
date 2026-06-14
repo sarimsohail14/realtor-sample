@@ -36,10 +36,10 @@ export default function Footer({ setActivePage }: FooterProps) {
               onClick={() => handleItemClick('home')}
               className="text-sm font-display font-bold tracking-[0.25em] text-white uppercase text-left group"
             >
-              Sterling
+              Ranchi Brothers
             </button>
             <p className="text-xs text-[#86868B] max-w-sm leading-relaxed">
-              Sterling and Sons organizes transactions for extraordinary architectural masterworks and estates throughout Beverly Hills, Malibu, and Bel Air. Flawless planning, bespoke discretion, unmatched legacy.
+              Ranchi Brothers Estate helps clients buy and sell luxury homes. We offer careful planning, complete privacy, and a trusted service.
             </p>
           </div>
 
@@ -49,13 +49,20 @@ export default function Footer({ setActivePage }: FooterProps) {
               Sections
             </h5>
             <ul className="space-y-2 text-xs text-[#86868B]">
-              {['Home', 'Buy', 'Sell', 'About', 'Contact'].map((item) => (
-                <li key={item}>
+              {[
+                { label: 'Home Catalog', id: 'home' },
+                { label: 'Buy Catalog', id: 'buy' },
+                { label: 'Sell Catalog', id: 'sell' },
+                { label: 'Interactive Property Map', id: 'map-explorer' },
+                { label: 'About Catalog', id: 'about' },
+                { label: 'Contact Catalog', id: 'contact' },
+              ].map((item) => (
+                <li key={item.id}>
                   <button
-                    onClick={() => handleItemClick(item.toLowerCase())}
-                    className="hover:text-white transition duration-200"
+                    onClick={() => handleItemClick(item.id)}
+                    className="hover:text-white transition duration-200 cursor-pointer"
                   >
-                    {item} Catalog
+                    {item.label}
                   </button>
                 </li>
               ))}
@@ -92,9 +99,9 @@ export default function Footer({ setActivePage }: FooterProps) {
         {/* Bottom copyright block */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-[#86868B] text-[11px]">
           <div className="space-y-1 text-center sm:text-left">
-            <p>&copy; {currentYear} Sterling and Sons Real Estate. All rights reserved.</p>
+            <p>&copy; {currentYear} Ranchi Brothers Estate. All rights reserved.</p>
             <p className="opacity-80">
-              Licensing credentials: DRE #01844200 &bull; Subject to non-disclosure compliance requirements.
+              Licensing credentials: RERA Registered &bull; Subject to non-disclosure compliance requirements.
             </p>
           </div>
 

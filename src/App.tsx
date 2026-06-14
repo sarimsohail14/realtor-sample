@@ -16,6 +16,7 @@ import Buy from './pages/Buy';
 import Sell from './pages/Sell';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import MapExplorer from './pages/MapExplorer';
 import ChatWidget from './components/ChatWidget';
 
 export default function App() {
@@ -33,7 +34,7 @@ export default function App() {
   // Clean format for WhatsApp link
   // Convert standard formatted phone to number digits for wa.me
   const whatsAppPhoneNumber = AGENT_INFO.phone.replace(/[^0-9]/g, "");
-  const whatsAppLink = `https://wa.me/${whatsAppPhoneNumber}?text=Hi%20Ananya,%20I'm%20exploring%20your%20luxury%20real%20estate%20portfolio.%20I'd%20love%20to%20coordinate%20some%20time%20to%20connect.`;
+  const whatsAppLink = `https://wa.me/${whatsAppPhoneNumber}?text=Hi%20Om%20Prakash,%20I'm%20exploring%20your%20luxury%20real%20estate%20portfolio.%20I'd%20love%20to%20coordinate%20some%20time%20to%20connect.`;
 
   // Trigger modal for details / send enquiry
   const handleOpenEnquiryModal = (property: Property) => {
@@ -66,6 +67,8 @@ export default function App() {
         return <About setActivePage={setActivePage} />;
       case 'contact':
         return <Contact />;
+      case 'map-explorer':
+        return <MapExplorer onViewProperty={handleOpenEnquiryModal} />;
       default:
         return (
           <Home

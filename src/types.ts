@@ -16,6 +16,7 @@ export interface Property {
   description: string;
   address: string;
   featured?: boolean;
+  coordinates?: [number, number];
 }
 
 export interface Testimonial {

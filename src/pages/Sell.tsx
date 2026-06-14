@@ -37,26 +37,26 @@ export default function Sell() {
 
   const benefits = [
     {
-      title: "Expedited Placements",
-      description: "Our focused broker network coordinates transactions with an average time-on-market of under 28 days.",
+      title: "Fast Selling",
+      description: "Our agent network helps you sell your property quickly, usually in less than 28 days.",
       icon: Calendar,
       img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=600"
     },
     {
-      title: "Highest Price Placed",
-      description: "Our direct positioning yields premium bidding wars resulting in 104% average list-price capture margins.",
+      title: "Best Selling Prices",
+      description: "We help you get the best price for your home by attracting multiple competitive offers from serious buyers.",
       icon: PiggyBank,
       img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600"
     },
     {
-      title: "Unmatched Depth",
-      description: "For over 15 years, we have represented estates within identical enclaves, knowing every street gate intimately.",
+      title: "Local Knowledge",
+      description: "We have worked in Ranchi's neighborhoods for over 15 years and know every street and locality intimately.",
       icon: Compass,
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600"
     },
     {
-      title: "Ironclad Compliance",
-      description: "All client files, negotiations, and contracts are shielded through secure legal structures and NDAs.",
+      title: "100% Secure & Private",
+      description: "Your personal files, deals, and contracts are kept completely safe and private with secure agreements.",
       icon: ShieldCheck,
       img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=600"
     }
@@ -76,7 +76,7 @@ export default function Sell() {
               Sell Your Property <span className="text-[#A0AAB5]">With Confidence.</span>
             </h1>
             <p className="text-[#6E6E73] max-w-lg text-lg leading-relaxed">
-              Entrust your architectural legacy to advisors who hold discretion, aesthetics, and high-consequence capital management as their highest principles.
+              Trust your premium home sale to experts who value your privacy, understand beautiful design, and get you the best results.
             </p>
             <div className="pt-4 flex gap-4">
               <button 
@@ -216,7 +216,7 @@ export default function Sell() {
                   </div>
                   <h4 className="text-xl font-bold text-[#1D1D1F]">Valuation Scheduled</h4>
                   <p className="text-xs text-[#6E6E73] leading-relaxed">
-                    Your requested asset dossier has been scheduled. Ananya Malhotra will contact you directly to establish secure valuation logistics.
+                    Your request has been received. Om Prakash will contact you directly to discuss the valuation of your property.
                   </p>
                   <button onClick={() => setIsSuccess(false)} className="bg-[#1D1D1F] text-white hover:bg-[#333336] px-6 py-2 rounded-full text-xs font-semibold transition mt-4">
                     Reset Form
@@ -314,7 +314,7 @@ export default function Sell() {
             <ScrollReveal delay={0.1}>
               <div className="bg-white p-8 md:p-10 rounded-3xl border border-neutral-100 shadow-sm space-y-8 flex flex-col justify-between h-full group hover:shadow-md transition">
                 <p className="text-lg text-[#1D1D1F] leading-relaxed font-light italic">
-                  "Ananya represents the singular standard in India. She placed our Malabar Hill penthouse off-market within exactly three weeks under absolute confidentiality. No public listing footprint, no endless walkthroughs, and a flawless premium bidding margin."
+                  "Om Prakash represents the singular standard in India. He placed our Malabar Hill penthouse off-market within exactly three weeks under absolute confidentiality. No public listing footprint, no endless walkthroughs, and a flawless premium bidding margin."
                 </p>
                 <div className="flex items-center gap-4">
                   <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=150&h=150" alt="Ketan Singhal" className="w-12 h-12 rounded-full object-cover shadow-sm group-hover:scale-110 transition" />
@@ -329,7 +329,7 @@ export default function Sell() {
             <ScrollReveal delay={0.2}>
               <div className="bg-white p-8 md:p-10 rounded-3xl border border-neutral-100 shadow-sm space-y-8 flex flex-col justify-between h-full group hover:shadow-md transition">
                 <p className="text-lg text-[#1D1D1F] leading-relaxed font-light italic">
-                  "When we moved to liquidate our private collection of Bangalore luxury duplexes, Ananya formulated a professional dossier that spoke to strategic family offices directly. Her discrete negotiation structure was pristine."
+                  "When we moved to liquidate our private collection of Bangalore luxury duplexes, Om Prakash formulated a professional dossier that spoke to strategic family offices directly. His discrete negotiation structure was pristine."
                 </p>
                 <div className="flex items-center gap-4">
                   <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150&h=150" alt="Mohit Goel" className="w-12 h-12 rounded-full object-cover shadow-sm group-hover:scale-110 transition" />

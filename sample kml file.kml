@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="document">
+	<name>sample kml file</name>
+	<gx:CascadingStyle kml:id="__managed_style_03AB01CC9E3FF6D65FE9_normal">
+		<Style>
+			<IconStyle>
+				<scale>1.5</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=42a5f5&amp;id=2304&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_03AB01CC9E3FF6D65FE9_highlight">
+		<Style>
+			<IconStyle>
+				<scale>1.8</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=42a5f5&amp;id=2304&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_03AB01CC9E3FF6D65FE9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_03AB01CC9E3FF6D65FE9_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_03AB01CC9E3FF6D65FE9_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_09C74849033FF6D526D3_highlight">
+		<Style>
+			<IconStyle>
+				<scale>1.8</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=d32f2f&amp;id=2211&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_09C74849033FF6D526D3_normal">
+		<Style>
+			<IconStyle>
+				<scale>1.5</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=d32f2f&amp;id=2211&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_09C74849033FF6D526D3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_09C74849033FF6D526D3_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_09C74849033FF6D526D3_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_0D8138A6883FF6D44A79_highlight">
+		<Style>
+			<IconStyle>
+				<scale>1.8</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=388e3c&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4.8</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_0D8138A6883FF6D44A79_normal">
+		<Style>
+			<IconStyle>
+				<scale>1.5</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=388e3c&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3.2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_0D8138A6883FF6D44A79">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_0D8138A6883FF6D44A79_normal</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0D8138A6883FF6D44A79_highlight</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0292507E463FF6D34C6E">
+		<name>Prarthana Ecoville</name>
+		<LookAt>
+			<longitude>85.35839919999999</longitude>
+			<latitude>23.3901081</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>960.1657269233289</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_0D8138A6883FF6D44A79</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>85.3583991,23.3901082,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="00B069B9413FF6D4E197">
+		<name>Bhagwan Mahavir Manipal Hospital</name>
+		<LookAt>
+			<longitude>85.3779205</longitude>
+			<latitude>23.3959833</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>960.1184031690034</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_09C74849033FF6D526D3</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>85.3779205,23.3959833,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0B266D28553FF6D58A38">
+		<name>Surendranath Centenary School</name>
+		<LookAt>
+			<longitude>85.3685895</longitude>
+			<latitude>23.3843823</latitude>
+			<altitude>0</altitude>
+			<heading>0</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>960.2118368959458</range>
+			<altitudeMode>relativeToGround</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_03AB01CC9E3FF6D65FE9</styleUrl>
+		<Point>
+			<altitudeMode>relativeToGround</altitudeMode>
+			<coordinates>85.36866379999999,23.3843273,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

@@ -33,6 +33,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
     { label: 'Home', id: 'home' },
     { label: 'Buy', id: 'buy' },
     { label: 'Sell', id: 'sell' },
+    { label: 'Interactive Property Map', id: 'map-explorer' },
     { label: 'About', id: 'about' },
     { label: 'Contact', id: 'contact' },
   ];
@@ -60,10 +61,10 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
           className="flex items-baseline gap-2 focus:outline-none cursor-pointer group"
         >
           <span className="text-xl font-display font-bold tracking-tighter text-[#1D1D1F] uppercase transition group-hover:opacity-75">
-            Sterling
+            Ranchi Brothers
           </span>
           <span className="text-[10px] uppercase font-bold tracking-wider text-[#6E6E73] border-l border-[#D2D2D7] pl-2 hidden sm:inline">
-            Luxury Real Estate
+            Estate
           </span>
         </button>
 
@@ -136,7 +137,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
               <span>Call Professional: {AGENT_INFO.phone}</span>
             </a>
             <p className="text-[10px] text-center text-[#6E6E73] uppercase tracking-widest pt-2">
-              Beverly Hills &bull; Malibu &bull; Bel Air
+              Ranchi &bull; Hinoo &bull; Jharkhand
             </p>
           </div>
         </div>

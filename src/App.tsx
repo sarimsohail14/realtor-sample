@@ -58,6 +58,7 @@ export default function App() {
             setBuyFilters={setBuyFilters}
             onViewProperty={handleViewOnMap}
             onViewOnMap={handleViewOnMap}
+            onEnquiryClick={handleOpenEnquiryModal}
           />
         );
       case 'buy':
@@ -99,6 +100,7 @@ export default function App() {
             setBuyFilters={setBuyFilters}
             onViewProperty={handleOpenEnquiryModal}
             onViewOnMap={handleViewOnMap}
+            onEnquiryClick={handleOpenEnquiryModal}
           />
         );
     }

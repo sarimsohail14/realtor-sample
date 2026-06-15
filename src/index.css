@@ -87,3 +87,49 @@ html {
   display: none !important;
 }
 
+/* Premium Leaflet Tooltip for Amenities */
+.leaflet-tooltip.amenity-leaflet-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.leaflet-tooltip-top.amenity-leaflet-tooltip::before {
+  border-top-color: rgba(29, 29, 31, 0.9) !important;
+  border-width: 6px 6px 0 !important;
+  margin-left: -6px !important;
+  bottom: 0 !important;
+}
+
+/* Sliding Upward Animation */
+@keyframes slideUpTooltip {
+  0% {
+    transform: translateY(12px) scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.amenity-tooltip-inner {
+  animation: slideUpTooltip 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: bottom center;
+}
+
+/* Elevate Leaflet Zoom Control to prevent clipping — both + and - visible */
+.leaflet-right .leaflet-control-zoom {
+  margin-bottom: 56px !important;
+  margin-right: 16px !important;
+}
+
+.leaflet-right .leaflet-control-zoom a {
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  font-size: 18px !important;
+}
+

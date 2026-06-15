@@ -29,7 +29,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop",
     description: "The Glass Pavilion is a beautiful modern home with huge glass windows and a strong steel design. It lets in lots of natural light and has a smooth flow between the indoor rooms and the outdoor garden.",
     featured: true,
-    coordinates: [23.3941, 85.3195]
+    coordinates: [23.3941, 85.3195],
+    amenities: [
+      { id: "p1-a1", name: "Kanke Dam Park", type: "park", coordinates: [23.3955, 85.3210], distance: "0.3 km" },
+      { id: "p1-a2", name: "DAV Public School Kanke", type: "school", coordinates: [23.3925, 85.3165], distance: "0.5 km" },
+      { id: "p1-a3", name: "Ranchi Rock Garden", type: "park", coordinates: [23.3970, 85.3235], distance: "0.6 km" },
+      { id: "p1-a4", name: "HP Petrol Pump", type: "fuel", coordinates: [23.3910, 85.3180], distance: "0.4 km" },
+      { id: "p1-a5", name: "Kanke Resort Restaurant", type: "restaurant", coordinates: [23.3985, 85.3150], distance: "0.7 km" }
+    ]
   },
   {
     id: "prop-2",
@@ -44,7 +51,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
     description: "This premium double-story penthouse features beautiful wooden frames, high-quality floors, and large windows that offer amazing views of Ranchi's green tree tops.",
     featured: true,
-    coordinates: [23.3892, 85.3596]
+    coordinates: [23.3892, 85.3596],
+    amenities: [
+      { id: "p2-a1", name: "RIMS Hospital", type: "hospital", coordinates: [23.3865, 85.3570], distance: "0.5 km" },
+      { id: "p2-a2", name: "Surendranath Centenary School", type: "school", coordinates: [23.3920, 85.3620], distance: "0.6 km" },
+      { id: "p2-a3", name: "Bariatu Park", type: "park", coordinates: [23.3875, 85.3615], distance: "0.3 km" },
+      { id: "p2-a4", name: "Indian Oil Petrol Pump", type: "fuel", coordinates: [23.3905, 85.3580], distance: "0.2 km" },
+      { id: "p2-a5", name: "Oxygen Park", type: "park", coordinates: [23.3810, 85.3510], distance: "1.2 km" }
+    ]
   },
   {
     id: "prop-3",
@@ -59,7 +73,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
     description: "A large, modern home located in a secure VIP area of Morabadi. It features high concrete walls, sliding glass doors, and a private basement room for art displays.",
     featured: true,
-    coordinates: [23.3881, 85.3347]
+    coordinates: [23.3881, 85.3347],
+    amenities: [
+      { id: "p3-a1", name: "Morabadi Ground & Park", type: "park", coordinates: [23.3860, 85.3325], distance: "0.4 km" },
+      { id: "p3-a2", name: "Dr. Shyama Prasad Mukherjee University", type: "school", coordinates: [23.3850, 85.3370], distance: "0.5 km" },
+      { id: "p3-a3", name: "Nucleus Mall", type: "mall", coordinates: [23.3765, 85.3315], distance: "1.4 km" },
+      { id: "p3-a4", name: "Morabadi Walkers Park", type: "park", coordinates: [23.3900, 85.3330], distance: "0.3 km" },
+      { id: "p3-a5", name: "Hotwar State Museum Restaurant", type: "restaurant", coordinates: [23.3925, 85.3395], distance: "0.7 km" }
+    ]
   },
   {
     id: "prop-4",
@@ -74,7 +95,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
     description: "A beautiful luxury apartment featuring high-quality black tiles, steel fittings, and wooden floors. It offers great views over the center of Ranchi.",
     featured: false,
-    coordinates: [23.3719, 85.3402]
+    coordinates: [23.3719, 85.3402],
+    amenities: [
+      { id: "p4-a1", name: "Firayalal Mall", type: "mall", coordinates: [23.3698, 85.3310], distance: "1.1 km" },
+      { id: "p4-a2", name: "St. Xavier's College", type: "school", coordinates: [23.3685, 85.3385], distance: "0.4 km" },
+      { id: "p4-a3", name: "Lalpur Central Market", type: "mall", coordinates: [23.3730, 85.3415], distance: "0.2 km" },
+      { id: "p4-a4", name: "Bharat Petroleum Pump", type: "fuel", coordinates: [23.3710, 85.3425], distance: "0.3 km" },
+      { id: "p4-a5", name: "Santevita Hospital", type: "hospital", coordinates: [23.3725, 85.3360], distance: "0.5 km" }
+    ]
   },
   {
     id: "prop-5",
@@ -89,7 +117,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop",
     description: "A spacious modern home in Argora with beautiful views of Ranchi. It features a clean box-like design with soft limestone details inside.",
     featured: false,
-    coordinates: [23.3533, 85.3021]
+    coordinates: [23.3533, 85.3021],
+    amenities: [
+      { id: "p5-a1", name: "Argora Housing Colony Park", type: "park", coordinates: [23.3515, 85.3045], distance: "0.3 km" },
+      { id: "p5-a2", name: "Springdale Public School", type: "school", coordinates: [23.3565, 85.2985], distance: "0.6 km" },
+      { id: "p5-a3", name: "Shell Fuel Station", type: "fuel", coordinates: [23.3550, 85.3050], distance: "0.4 km" },
+      { id: "p5-a4", name: "Argora Railway Station Market", type: "mall", coordinates: [23.3485, 85.2995], distance: "0.7 km" },
+      { id: "p5-a5", name: "Urban Pind Restaurant", type: "restaurant", coordinates: [23.3520, 85.2970], distance: "0.6 km" }
+    ]
   },
   {
     id: "prop-6",
@@ -104,7 +139,14 @@ export const PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop",
     description: "A beautiful plot of land located right next to the Kanke Dam road. It is ready for building and comes with pre-approved design plans for a modern home.",
     featured: false,
-    coordinates: [23.3980, 85.3180]
+    coordinates: [23.3980, 85.3180],
+    amenities: [
+      { id: "p6-a1", name: "Kanke Dam Reservoir Park", type: "park", coordinates: [23.3941, 85.3195], distance: "0.4 km" },
+      { id: "p6-a2", name: "Birsa Agricultural University", type: "school", coordinates: [23.4020, 85.3110], distance: "0.9 km" },
+      { id: "p6-a3", name: "Kanke Road Shopping Complex", type: "mall", coordinates: [23.3950, 85.3190], distance: "0.3 km" },
+      { id: "p6-a4", name: "HP Petrol Pump", type: "fuel", coordinates: [23.3910, 85.3180], distance: "0.8 km" },
+      { id: "p6-a5", name: "Sambo River Retreat Resort", type: "restaurant", coordinates: [23.4045, 85.3210], distance: "0.9 km" }
+    ]
   }
 ];
 

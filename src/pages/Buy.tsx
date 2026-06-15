@@ -20,9 +20,10 @@ interface BuyProps {
   setFilters: (filters: { location: string; type: string; priceRange: string }) => void;
   onEnquiryClick: (property: Property) => void;
   onViewProperty: (property: Property) => void;
+  onViewOnMap: (property: Property) => void;
 }
 
-export default function Buy({ filters, setFilters, onEnquiryClick, onViewProperty }: BuyProps) {
+export default function Buy({ filters, setFilters, onEnquiryClick, onViewProperty, onViewOnMap }: BuyProps) {
   const [selectedBeds, setSelectedBeds] = useState<string>('all');
   const [filteredProperties, setFilteredProperties] = useState<Property[]>(PROPERTIES);
 
@@ -254,22 +255,32 @@ export default function Buy({ filters, setFilters, onEnquiryClick, onViewPropert
                           <span>{property.sqft.toLocaleString()} SqFt</span>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-3 pt-1">
-                          {/* Details Button */}
+                        <div className="flex flex-col gap-2.5 pt-1">
+                          {/* View on Map (Primary Action) */}
                           <button
-                            onClick={() => onViewProperty(property)}
-                            className="bg-white hover:bg-neutral-50 border border-[#1D1D1F] text-[#1D1D1F] text-center py-2.5 rounded-full text-xs font-bold uppercase transition cursor-pointer"
+                            onClick={() => onViewOnMap(property)}
+                            className="w-full bg-[#1D1D1F] hover:bg-neutral-800 text-white text-center py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition cursor-pointer border-none shadow-sm"
                           >
-                            View Details
+                            View on Map
                           </button>
                           
-                          {/* Send Enquiry Button */}
-                          <button
-                            onClick={() => onEnquiryClick(property)}
-                            className="bg-[#1D1D1F] hover:bg-neutral-800 text-white text-center py-2.5 rounded-full text-xs font-bold tracking-tight uppercase transition cursor-pointer"
-                          >
-                            Send Enquiry
-                          </button>
+                          <div className="grid grid-cols-2 gap-2.5">
+                            {/* Details Button */}
+                            <button
+                              onClick={() => onViewProperty(property)}
+                              className="bg-white hover:bg-neutral-50 border border-neutral-300 text-[#1D1D1F] text-center py-2 rounded-full text-xs font-bold uppercase transition cursor-pointer"
+                            >
+                              Details
+                            </button>
+                            
+                            {/* Send Enquiry Button */}
+                            <button
+                              onClick={() => onEnquiryClick(property)}
+                              className="bg-neutral-100 hover:bg-neutral-200 text-neutral-850 text-center py-2 rounded-full text-xs font-bold uppercase transition cursor-pointer border-none"
+                            >
+                              Enquiry
+                            </button>
+                          </div>
                         </div>
                       </div>
 

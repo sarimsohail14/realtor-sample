@@ -3,6 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+export interface PropertyAmenity {
+  id: string;
+  name: string;
+  type: 'school' | 'park' | 'mall' | 'fuel' | 'hospital' | 'restaurant';
+  coordinates: [number, number];
+  distance: string; // e.g. "0.8 km"
+}
+
 export interface Property {
   id: string;
   name: string;
@@ -17,6 +25,7 @@ export interface Property {
   address: string;
   featured?: boolean;
   coordinates?: [number, number];
+  amenities?: PropertyAmenity[];
 }
 
 export interface Testimonial {

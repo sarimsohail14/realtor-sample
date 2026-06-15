@@ -10,12 +10,16 @@ import KmlMap from '../components/KmlMap';
 import { formatRupee } from '../utils';
 
 interface MapExplorerProps {
+  selectedProperty: Property | null;
+  onSelectProperty: (property: Property | null) => void;
   onViewProperty: (property: Property) => void;
 }
 
-export default function MapExplorer({ onViewProperty }: MapExplorerProps) {
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
-
+export default function MapExplorer({ 
+  selectedProperty, 
+  onSelectProperty, 
+  onViewProperty 
+}: MapExplorerProps) {
   return (
     <div className="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16 font-sans">
       
@@ -51,7 +55,7 @@ export default function MapExplorer({ onViewProperty }: MapExplorerProps) {
             {PROPERTIES.map((prop) => (
               <div
                 key={prop.id}
-                onClick={() => setSelectedProperty(prop)}
+                onClick={() => onSelectProperty(prop)}
                 className={`flex items-start gap-3 p-3 rounded-xl border transition duration-200 cursor-pointer ${
                   selectedProperty?.id === prop.id
                     ? 'bg-white border-amber-400 shadow-sm'
@@ -78,41 +82,43 @@ export default function MapExplorer({ onViewProperty }: MapExplorerProps) {
             ))}
           </div>
           
-          {/* Active selection detail footer in sidebar */}
+          {/* Active selection detail footer in sidebar (Mobile/Tablet only) */}
           {selectedProperty && (
-            <div className="p-4 border-t border-neutral-100 bg-white flex flex-col gap-2 flex-shrink-0">
-              <div className="flex justify-between items-baseline">
-                <span className="text-xs font-bold text-neutral-900">{selectedProperty.name}</span>
-                <span className="text-[10px] font-bold text-neutral-900">{formatRupee(selectedProperty.price)}</span>
+            <div className="lg:hidden p-4 border-t border-neutral-100 bg-white flex flex-col gap-3 flex-shrink-0 select-none">
+              <div className="flex justify-between items-baseline min-w-0">
+                <span className="text-xs font-bold text-neutral-900 truncate mr-2">{selectedProperty.name}</span>
+                <span className="text-[10px] font-bold text-[#B08968] flex-shrink-0">{formatRupee(selectedProperty.price)}</span>
               </div>
               <div className="flex gap-2">
                 <button
                   type="button"
                   onClick={() => onViewProperty(selectedProperty)}
-                  className="flex-grow py-2 bg-neutral-900 text-white rounded-lg text-[10px] font-bold transition hover:bg-neutral-800 cursor-pointer text-center"
+                  className="flex-grow py-2.5 bg-neutral-900 text-white rounded-full text-[10px] font-extrabold uppercase tracking-wider transition hover:bg-neutral-800 cursor-pointer text-center border-none shadow-xs"
                 >
                   Send Enquiry
                 </button>
                 <button
                   type="button"
-                  onClick={() => setSelectedProperty(null)}
-                  className="px-3 py-2 border border-neutral-200 text-[#6E6E73] rounded-lg text-[10px] font-bold hover:bg-neutral-50 cursor-pointer"
+                  onClick={() => onSelectProperty(null)}
+                  className="px-5 py-2.5 border border-neutral-300 text-neutral-800 rounded-full text-[10px] font-extrabold uppercase tracking-wider hover:bg-[#F5F5F7] cursor-pointer transition shadow-xs"
                 >
                   Clear
                 </button>
               </div>
             </div>
           )}
+          
+          {/* Sidebar panel */}
         </div>
 
         {/* Map Canvas (70% width) */}
-        <div className="w-full lg:col-span-8 h-[350px] lg:h-full relative">
+        <div className="w-full lg:col-span-8 h-[350px] lg:h-[650px] relative">
           <KmlMap 
             property={selectedProperty} 
             allProperties={PROPERTIES} 
-            onSelectProperty={(prop) => setSelectedProperty(prop)}
+            onSelectProperty={onSelectProperty}
             onEnquiryClick={onViewProperty}
-            height="100%" 
+            height={typeof window !== 'undefined' && window.innerWidth >= 1024 ? '650px' : '350px'} 
           />
         </div>
       </div>

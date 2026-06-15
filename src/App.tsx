@@ -18,6 +18,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import MapExplorer from './pages/MapExplorer';
 import ChatWidget from './components/ChatWidget';
+import PropertyDetail from './pages/PropertyDetail';
 
 export default function App() {
   const [activePage, setActivePage] = useState<string>('home');
@@ -42,6 +43,12 @@ export default function App() {
     setIsModalOpen(true);
   };
 
+  const handleViewOnMap = (property: Property) => {
+    setSelectedProperty(property);
+    setActivePage('property-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const renderActivePage = () => {
     switch (activePage) {
       case 'home':
@@ -49,7 +56,8 @@ export default function App() {
           <Home
             setActivePage={setActivePage}
             setBuyFilters={setBuyFilters}
-            onViewProperty={handleOpenEnquiryModal}
+            onViewProperty={handleViewOnMap}
+            onViewOnMap={handleViewOnMap}
           />
         );
       case 'buy':
@@ -58,7 +66,8 @@ export default function App() {
             filters={buyFilters}
             setFilters={setBuyFilters}
             onEnquiryClick={handleOpenEnquiryModal}
-            onViewProperty={handleOpenEnquiryModal}
+            onViewProperty={handleViewOnMap}
+            onViewOnMap={handleViewOnMap}
           />
         );
       case 'sell':
@@ -68,7 +77,21 @@ export default function App() {
       case 'contact':
         return <Contact />;
       case 'map-explorer':
-        return <MapExplorer onViewProperty={handleOpenEnquiryModal} />;
+        return (
+          <MapExplorer
+            selectedProperty={selectedProperty}
+            onSelectProperty={setSelectedProperty}
+            onViewProperty={handleOpenEnquiryModal}
+          />
+        );
+      case 'property-detail':
+        return (
+          <PropertyDetail
+            property={selectedProperty}
+            onEnquiryClick={handleOpenEnquiryModal}
+            setActivePage={setActivePage}
+          />
+        );
       default:
         return (
           <Home

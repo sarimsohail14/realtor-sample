@@ -17,6 +17,7 @@ interface HomeProps {
   setActivePage: (page: string) => void;
   setBuyFilters: (filters: { location: string; type: string; priceRange: string }) => void;
   onViewProperty: (property: Property) => void;
+  onViewOnMap: (property: Property) => void;
 }
 
 const customTestimonialsList = [
@@ -76,7 +77,7 @@ const customTestimonialsList = [
   }
 ];
 
-export default function Home({ setActivePage, setBuyFilters, onViewProperty }: HomeProps) {
+export default function Home({ setActivePage, setBuyFilters, onViewProperty, onViewOnMap }: HomeProps) {
   // Search state
   const [searchLocation, setSearchLocation] = useState('');
   const [searchType, setSearchType] = useState('');
@@ -449,12 +450,20 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty }: H
                       <span>{property.sqft.toLocaleString()} SqFt</span>
                     </div>
 
-                    <button
-                      onClick={() => onViewProperty(property)}
-                      className="w-full bg-[#1D1D1F] text-white hover:bg-neutral-800 text-center py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 cursor-pointer shadow-sm"
-                    >
-                      View Details
-                    </button>
+                    <div className="grid grid-cols-2 gap-3 pt-1">
+                      <button
+                        onClick={() => onViewOnMap(property)}
+                        className="bg-[#1D1D1F] text-white hover:bg-neutral-800 text-center py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 cursor-pointer shadow-sm border-none"
+                      >
+                        View on Map
+                      </button>
+                      <button
+                        onClick={() => onViewProperty(property)}
+                        className="bg-white hover:bg-neutral-50 border border-[#1D1D1F] text-[#1D1D1F] text-center py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 cursor-pointer"
+                      >
+                        Details
+                      </button>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>

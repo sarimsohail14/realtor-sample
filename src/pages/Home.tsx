@@ -588,6 +588,40 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
         </div>
       </section>
 
+      {/* CLIENT TESTIMONIALS */}
+      <section className="py-24 bg-[#F5F5F7] px-6 md:px-12 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto space-y-12">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-center max-w-xl mx-auto text-center"
+          >
+            <div className="flex justify-center mb-4">
+              <div className="border border-[#D2D2D7]/60 bg-white/60 py-1 px-4 rounded-full text-[10px] uppercase tracking-widest font-bold text-[#6E6E73]">
+                Testimonials
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tightest leading-tight text-[#1D1D1F]">
+              What our users say.
+            </h2>
+            <p className="text-center mt-3 text-xs md:text-sm text-[#6E6E73] leading-relaxed font-light">
+              See what our customers have to say about our discreet white-glove advisory and off-market cataloging.
+            </p>
+          </motion.div>
+
+          <div className="flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[640px] overflow-hidden">
+            <TestimonialsColumn testimonials={firstColumn} duration={15} />
+            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+            <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+          </div>
+
+        </div>
+      </section>
+
       {/* WHY CHOOSE US - ELITE ADVANTAGES (Premium Modern Split Section) */}
       <section className="py-24 md:py-32 bg-[#FAF9F6] px-6 md:px-12 border-t border-[#D2D2D7]/40 text-left">
         <div className="max-w-7xl mx-auto">
@@ -603,13 +637,13 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
               </h2>
               <div className="w-12 h-[1px] bg-[#B08968]" />
               <p className="text-sm text-[#6E6E73] leading-relaxed font-light max-w-sm">
-                We make buying luxury homes simple and secure. We offer private property lists, full confidentiality, and expert guidance at every step.
+                We help you buy and sell homes without any stress. We keep your details private, give you access to the best properties, and guide you at every step.
               </p>
               
               <div className="hidden lg:block pt-8">
                 <div className="text-[10px] font-bold uppercase tracking-wider text-[#1D1D1F] flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#B08968] animate-pulse" />
-                  Elite Concierge Desk Active
+                  Support Team Available
                 </div>
               </div>
             </div>
@@ -630,13 +664,13 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                   </div>
                   <div className="space-y-2 flex-1">
                     <h3 className="font-display font-bold text-[18px] tracking-tight text-[#1D1D1F] group-hover:text-[#B08968] transition-colors duration-300">
-                      Absolute Discretion & Privacy
+                      Your Privacy is Protected
                     </h3>
                     <p className="text-[13px] text-[#6E6E73] leading-relaxed font-light">
-                      Your privacy is our utmost priority. Every private off-market inquiry, portfolio viewing, and final asset transfer is completed under military-grade confidentiality covenants and non-disclosure protocols.
+                      We keep all your information completely private and safe. Whether you are looking at a property or closing a deal, your details are never shared with anyone.
                     </p>
                     <div className="inline-flex items-center gap-1.5 pt-2 text-[10px] uppercase font-bold tracking-wider text-[#1D1D1F]">
-                      <span>100% Secure Correspondence</span>
+                      <span>100% Safe & Confidential</span>
                       <ArrowUpRight className="w-3 h-3 text-[#B08968]" />
                     </div>
                   </div>
@@ -656,13 +690,13 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                   </div>
                   <div className="space-y-2 flex-1">
                     <h3 className="font-display font-bold text-[18px] tracking-tight text-[#1D1D1F] group-hover:text-[#B08968] transition-colors duration-300">
-                      Bespoke Masterpiece Portfolio
+                      Hand-Picked Properties for You
                     </h3>
                     <p className="text-[13px] text-[#6E6E73] leading-relaxed font-light">
-                      We bypass generic public MLS structures completely. Our hand-selected list of architectural jewels, coastal sanctuaries, and historical estates is curated strictly for private distribution to qualified clients.
+                      We carefully select the best homes and properties just for you. Many of our listings are not shown to the public, so you get access to options others cannot find on their own.
                     </p>
                     <div className="inline-flex items-center gap-1.5 pt-2 text-[10px] uppercase font-bold tracking-wider text-[#1D1D1F]">
-                      <span>Exclusive Off-Market Access</span>
+                      <span>Properties Others Don't See</span>
                       <ArrowUpRight className="w-3 h-3 text-[#B08968]" />
                     </div>
                   </div>
@@ -682,13 +716,13 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                   </div>
                   <div className="space-y-2 flex-1">
                     <h3 className="font-display font-bold text-[18px] tracking-tight text-[#1D1D1F] group-hover:text-[#B08968] transition-colors duration-300">
-                      Intellectual White-Glove Advisory
+                      We Help You at Every Step
                     </h3>
                     <p className="text-[13px] text-[#6E6E73] leading-relaxed font-light">
-                      From diagnostic structural audit coordination to private wealth management liaisons and seamless regulatory handling, we act as a cohesive strategic partner throughout the trade.
+                      From your first visit to the final paperwork, we are with you the whole way. We handle all the legal and technical work so you don't have to worry about a thing.
                     </p>
                     <div className="inline-flex items-center gap-1.5 pt-2 text-[10px] uppercase font-bold tracking-wider text-[#1D1D1F]">
-                      <span>End-to-End Asset Advocacy</span>
+                      <span>Complete Support, Start to Finish</span>
                       <ArrowUpRight className="w-3 h-3 text-[#B08968]" />
                     </div>
                   </div>
@@ -844,23 +878,23 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
               {[
                 {
                   q: "How do I buy a property?",
-                  a: "Browse our curated residences, select your target assets, and arrange a private briefing. We handle all legal diligence and custom negotiations on your behalf."
+                  a: "Just browse our listings, pick a property you like, and call or message us to book a visit. We will take care of all the paperwork and negotiations so the process is smooth and easy for you."
                 },
                 {
                   q: "How do I sell my property?",
-                  a: "Arrange an appraisal. We place select luxury assets into our ultra-discreet off-market catalogue, presenting them solely to verified high-net-worth buyers."
+                  a: "Contact us and we will come to see your property and give you a fair price estimate. We will then find the right buyers and handle the entire selling process on your behalf."
                 },
                 {
                   q: "What documents are required?",
-                  a: "Generally, proof of funds, KYC identification, and custom non-disclosure covenants are required to unlock our premium tier off-market properties."
+                  a: "You will typically need your ID proof, address proof, and ownership papers for the property. Our team will guide you on exactly what is needed based on your situation."
                 },
                 {
                   q: "How is property value calculated?",
-                  a: "We synthesize historical district valuations, signature structural pedigree, material assets quality, and current private luxury market momentum."
+                  a: "We look at the location, size, age, condition, and nearby facilities of the property, as well as current market prices in the area, to give you a fair and accurate value."
                 },
                 {
                   q: "Do you help with home loans?",
-                  a: "Absolutely. We maintain direct partnerships with premier private banking divisions to facilitate bespoke jumbo loans and portfolio financing."
+                  a: "Yes, we do. We work with several banks and lenders who can offer you good home loan options. We will help you compare rates and choose the one that fits your budget."
                 }
               ].map((faq, index) => {
                 const isOpen = openFaq === index;
@@ -932,40 +966,6 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 </div>
               </div>
             </ScrollReveal>
-          </div>
-
-        </div>
-      </section>
-
-      {/* CLIENT TESTIMONIALS */}
-      <section className="py-24 bg-[#F5F5F7] px-6 md:px-12 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto space-y-12">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center justify-center max-w-xl mx-auto text-center"
-          >
-            <div className="flex justify-center mb-4">
-              <div className="border border-[#D2D2D7]/60 bg-white/60 py-1 px-4 rounded-full text-[10px] uppercase tracking-widest font-bold text-[#6E6E73]">
-                Testimonials
-              </div>
-            </div>
-
-            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tightest leading-tight text-[#1D1D1F]">
-              What our users say.
-            </h2>
-            <p className="text-center mt-3 text-xs md:text-sm text-[#6E6E73] leading-relaxed font-light">
-              See what our customers have to say about our discreet white-glove advisory and off-market cataloging.
-            </p>
-          </motion.div>
-
-          <div className="flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[640px] overflow-hidden">
-            <TestimonialsColumn testimonials={firstColumn} duration={15} />
-            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
-            <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
           </div>
 
         </div>

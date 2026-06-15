@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, MapPin, Home as HomeIcon, IndianRupee, ArrowUpRight, Lock, Compass, Award, Briefcase, Key, Handshake } from 'lucide-react';
+import { Search, MapPin, Home as HomeIcon, IndianRupee, ArrowUpRight, Lock, Compass, Award } from 'lucide-react';
 import { PROPERTIES, TESTIMONIALS, NEIGHBORHOODS, AGENT_INFO } from '../data';
 import ScrollReveal from '../components/ScrollReveal';
 import { Property } from '../types';
@@ -135,6 +135,41 @@ const BungalowIcon = () => (
     <path d="M20 14C20 12 20 11 20 11" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
     <rect x="7" y="14" width="5" height="7" stroke="#1D1D1F" strokeWidth="1.2" />
     <line x1="9.5" y1="14" x2="9.5" y2="21" stroke="#1D1D1F" strokeWidth="1" />
+  </svg>
+);
+
+const BuyHomeIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="8" width="11" height="11" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M2 9L9.5 3L17 9" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="7.5" y="13.5" width="4" height="5.5" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <circle cx="17.5" cy="15.5" r="2.5" stroke="#1D1D1F" strokeWidth="1.5" />
+    <line x1="19.5" y1="17.5" x2="22" y2="20" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const SellPropertyIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 20V10L10 5L16 10V20H4Z" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <rect x="8" y="14" width="4" height="6" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <path d="M15 12L19.5 7.5C20 7 21 7.5 21.5 8L22.5 9C23 9.5 23.5 10.5 23 11L18.5 15.5" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <circle cx="20.5" cy="9.5" r="1" fill="#B08968" />
+  </svg>
+);
+
+const RentHomeIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 15C9.20914 15 11 13.2091 11 11C11 8.79086 9.20914 7 7 7C4.79086 7 3 8.79086 3 11C3 13.2091 4.79086 15 7 15Z" stroke="#1D1D1F" strokeWidth="1.5" />
+    <path d="M11 11H21V15H19V11H17V14H15V11H11" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <circle cx="7" cy="11" r="1.5" fill="#B08968" stroke="#B08968" />
+  </svg>
+);
+
+const PropertyManagementIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 15V11L12 8L16 11V15H8Z" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <rect x="10.5" y="12" width="3" height="3" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <path d="M12 3C12 3 17 5 19 6C19 12 17 17 12 21C7 17 5 12 5 6C7 5 12 3 12 3Z" stroke="#B08968" strokeWidth="1.5" strokeLinejoin="round" />
   </svg>
 );
 
@@ -560,9 +595,9 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
               
               {/* Service 1 */}
               <ScrollReveal delay={0.05}>
-                <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md transition-all duration-300 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-650 flex items-center justify-center">
-                    <HomeIcon className="w-6 h-6 stroke-[1.8]" />
+                <div className="group bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md hover:border-[#1D1D1F]/20 transition-all duration-300 space-y-4">
+                  <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                    <BuyHomeIcon />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="font-display font-bold text-base text-[#1D1D1F]">
@@ -577,9 +612,9 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
 
               {/* Service 2 */}
               <ScrollReveal delay={0.1}>
-                <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md transition-all duration-300 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-650 flex items-center justify-center">
-                    <Handshake className="w-6 h-6 stroke-[1.8]" />
+                <div className="group bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md hover:border-[#1D1D1F]/20 transition-all duration-300 space-y-4">
+                  <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                    <SellPropertyIcon />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="font-display font-bold text-base text-[#1D1D1F]">
@@ -594,9 +629,9 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
 
               {/* Service 3 */}
               <ScrollReveal delay={0.15}>
-                <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md transition-all duration-300 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-650 flex items-center justify-center">
-                    <Key className="w-6 h-6 stroke-[1.8]" />
+                <div className="group bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md hover:border-[#1D1D1F]/20 transition-all duration-300 space-y-4">
+                  <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                    <RentHomeIcon />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="font-display font-bold text-base text-[#1D1D1F]">
@@ -611,9 +646,9 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
 
               {/* Service 4 */}
               <ScrollReveal delay={0.2}>
-                <div className="bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md transition-all duration-300 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-650 flex items-center justify-center">
-                    <Briefcase className="w-6 h-6 stroke-[1.8]" />
+                <div className="group bg-white p-6 md:p-8 rounded-2xl border border-[#D2D2D7]/30 shadow-xs hover:shadow-md hover:border-[#1D1D1F]/20 transition-all duration-300 space-y-4">
+                  <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                    <PropertyManagementIcon />
                   </div>
                   <div className="space-y-1.5">
                     <h3 className="font-display font-bold text-base text-[#1D1D1F]">

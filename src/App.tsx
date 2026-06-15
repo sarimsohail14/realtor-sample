@@ -98,6 +98,7 @@ export default function App() {
             setActivePage={setActivePage}
             setBuyFilters={setBuyFilters}
             onViewProperty={handleOpenEnquiryModal}
+            onViewOnMap={handleViewOnMap}
           />
         );
     }

@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, MapPin, Home as HomeIcon, IndianRupee, ArrowUpRight, Lock, Compass, Award, Building2, Briefcase, Layers, Palmtree, Key, Handshake } from 'lucide-react';
+import { Search, MapPin, Home as HomeIcon, IndianRupee, ArrowUpRight, Lock, Compass, Award, Briefcase, Key, Handshake } from 'lucide-react';
 import { PROPERTIES, TESTIMONIALS, NEIGHBORHOODS, AGENT_INFO } from '../data';
 import ScrollReveal from '../components/ScrollReveal';
 import { Property } from '../types';
@@ -76,6 +76,66 @@ const customTestimonialsList = [
     role: "E-commerce Manager"
   }
 ];
+
+const HousesIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 20H22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="4" y="8" width="12" height="12" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <rect x="8" y="4" width="12" height="8" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" fill="white" />
+    <rect x="6" y="14" width="3" height="6" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <rect x="10" y="6" width="6" height="4" stroke="#1D1D1F" strokeWidth="1.2" />
+    <line x1="13" y1="6" x2="13" y2="10" stroke="#1D1D1F" strokeWidth="1" />
+  </svg>
+);
+
+const ApartmentsIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 22H22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="7" y="3" width="10" height="19" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M4 7H7M4 12H7M4 17H7" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M17 9H20M17 14H20" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="10" y1="6" x2="14" y2="6" stroke="#1D1D1F" strokeWidth="1.2" />
+    <line x1="10" y1="11" x2="14" y2="11" stroke="#1D1D1F" strokeWidth="1.2" />
+    <line x1="10" y1="16" x2="14" y2="16" stroke="#1D1D1F" strokeWidth="1.2" />
+  </svg>
+);
+
+const OfficeIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 22H22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M5 22V6L13 3V22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M13 22V10L18 8V22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M10 22V18H14V22" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <line x1="8" y1="8" x2="8" y2="22" stroke="#1D1D1F" strokeWidth="1" strokeDasharray="2 2" />
+    <line x1="16" y1="12" x2="16" y2="22" stroke="#1D1D1F" strokeWidth="1" strokeDasharray="2 2" />
+  </svg>
+);
+
+const TownhomeIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 21H22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M4 21V10L10 6L13 10V21" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M13 21V12L17 9L20 12V21" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <rect x="6" y="16" width="2.5" height="5" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <rect x="15" y="16" width="2.5" height="5" fill="#B08968" stroke="#B08968" strokeWidth="1.2" />
+    <line x1="4" y1="10" x2="10" y2="6" stroke="#1D1D1F" strokeWidth="1.5" />
+    <line x1="13" y1="12" x2="17" y2="9" stroke="#1D1D1F" strokeWidth="1.5" />
+  </svg>
+);
+
+const BungalowIcon = () => (
+  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 21H22" stroke="#1D1D1F" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="4" y="11" width="13" height="10" stroke="#1D1D1F" strokeWidth="1.5" strokeLinejoin="round" />
+    <path d="M2 11H19" stroke="#1D1D1F" strokeWidth="2" strokeLinecap="round" />
+    <path d="M20 21V14" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M20 14C19 12.5 17.5 12 17.5 12" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M20 14C21 12.5 22.5 12 22.5 12" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M20 14C20 12 20 11 20 11" stroke="#B08968" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="7" y="14" width="5" height="7" stroke="#1D1D1F" strokeWidth="1.2" />
+    <line x1="9.5" y1="14" x2="9.5" y2="21" stroke="#1D1D1F" strokeWidth="1" />
+  </svg>
+);
 
 export default function Home({ setActivePage, setBuyFilters, onViewProperty, onViewOnMap }: HomeProps) {
   // Search state
@@ -277,8 +337,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 onClick={() => handleTypeClick('villa')}
                 className="w-full bg-white border border-[#D2D2D7]/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-[#1D1D1F]/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center transition-all duration-300 group-hover:bg-blue-100 group-hover:scale-105 shadow-[0_4px_12px_rgba(37,99,235,0.15)]">
-                  <HomeIcon className="w-6 h-6 stroke-[1.8]" />
+                <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                  <HousesIcon />
                 </div>
                 <div className="space-y-1 text-center">
                   <h3 className="font-display font-bold text-sm text-[#1D1D1F] tracking-tight">
@@ -297,8 +357,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 onClick={() => handleTypeClick('apartment')}
                 className="w-full bg-white border border-[#D2D2D7]/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-[#1D1D1F]/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center transition-all duration-300 group-hover:bg-indigo-100 group-hover:scale-105 shadow-[0_4px_12px_rgba(79,70,229,0.15)]">
-                  <Building2 className="w-6 h-6 stroke-[1.8]" />
+                <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                  <ApartmentsIcon />
                 </div>
                 <div className="space-y-1 text-center">
                   <h3 className="font-display font-bold text-sm text-[#1D1D1F] tracking-tight">
@@ -317,8 +377,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 onClick={() => handleTypeClick('apartment')}
                 className="w-full bg-white border border-[#D2D2D7]/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-[#1D1D1F]/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center transition-all duration-300 group-hover:bg-emerald-100 group-hover:scale-105 shadow-[0_4px_12px_rgba(5,150,105,0.15)]">
-                  <Briefcase className="w-6 h-6 stroke-[1.8]" />
+                <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                  <OfficeIcon />
                 </div>
                 <div className="space-y-1 text-center">
                   <h3 className="font-display font-bold text-sm text-[#1D1D1F] tracking-tight">
@@ -337,8 +397,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 onClick={() => handleTypeClick('villa')}
                 className="w-full bg-white border border-[#D2D2D7]/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-[#1D1D1F]/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
               >
-                <div className="w-14 h-14 rounded-full bg-violet-50 text-violet-600 flex items-center justify-center transition-all duration-300 group-hover:bg-violet-100 group-hover:scale-105 shadow-[0_4px_12px_rgba(124,58,237,0.15)]">
-                  <Layers className="w-6 h-6 stroke-[1.8]" />
+                <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                  <TownhomeIcon />
                 </div>
                 <div className="space-y-1 text-center">
                   <h3 className="font-display font-bold text-sm text-[#1D1D1F] tracking-tight">
@@ -357,8 +417,8 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 onClick={() => handleTypeClick('plot')}
                 className="w-full bg-white border border-[#D2D2D7]/50 rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 hover:shadow-[0_12px_24px_rgba(0,0,0,0.06)] hover:border-[#1D1D1F]/20 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group col-span-2 lg:col-span-1"
               >
-                <div className="w-14 h-14 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center transition-all duration-300 group-hover:bg-amber-100 group-hover:scale-105 shadow-[0_4px_12px_rgba(217,119,6,0.15)]">
-                  <Palmtree className="w-6 h-6 stroke-[1.8]" />
+                <div className="w-14 h-14 rounded-full bg-[#FAF9F6] border border-[#D2D2D7]/30 flex items-center justify-center transition-all duration-300 group-hover:bg-[#B08968]/10 group-hover:border-[#B08968]/30 group-hover:scale-105 shadow-[0_4px_12px_rgba(29,29,31,0.02)] group-hover:shadow-[0_4px_16px_rgba(176,137,104,0.15)]">
+                  <BungalowIcon />
                 </div>
                 <div className="space-y-1 text-center">
                   <h3 className="font-display font-bold text-sm text-[#1D1D1F] tracking-tight">

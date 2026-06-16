@@ -37,7 +37,7 @@ export default function ChatWidget() {
         {
           id: '1',
           sender: 'bot',
-          text: 'Hi! Welcome to Ranchi Brothers Estate. Is there anything I can assist you with?',
+          text: 'Hi! Welcome to Homes for All. Is there anything I can assist you with?',
           options: ['Yes', 'Not now']
         }
       ]);
@@ -189,11 +189,11 @@ export default function ChatWidget() {
             <div className="bg-[#1D1D1F] p-4 flex items-center justify-between text-white rounded-t-2xl">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center p-1 border border-white/20">
-                  <span className="font-display font-bold text-lg text-white tracking-widest">RBE</span>
+                  <span className="font-display font-bold text-lg text-white tracking-widest">HFA</span>
                 </div>
                 <div className="space-y-0.5">
                   <h4 className="text-sm font-bold tracking-tight text-white leading-none">
-                    Ranchi Brothers Support
+                    Homes for All Support
                   </h4>
                   <p className="text-[10px] text-white/80 font-medium">
                     Typically replies in seconds

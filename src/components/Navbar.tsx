@@ -61,10 +61,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
           className="flex items-baseline gap-2 focus:outline-none cursor-pointer group"
         >
           <span className="text-xl font-display font-bold tracking-tighter text-[#1D1D1F] uppercase transition group-hover:opacity-75">
-            Ranchi Brothers
-          </span>
-          <span className="text-[10px] uppercase font-bold tracking-wider text-[#6E6E73] border-l border-[#D2D2D7] pl-2 hidden sm:inline">
-            Estate
+            Homes for All
           </span>
         </button>
 

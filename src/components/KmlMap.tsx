@@ -134,12 +134,15 @@ export default function KmlMap({
   const [activePropertyId, setActivePropertyId] = useState<string | null>(null);
 
   useEffect(() => {
-    if (property || allProperties.length === 0) {
-      setActivePropertyId(null);
+    if (property || allProperties.length === 0 || isPropertyPopupOpen) {
+      // Pause automatic cycling when a popup is open or if single property mode
       return;
     }
 
-    setActivePropertyId(allProperties[0].id);
+    // Initialize activePropertyId if not set
+    if (!activePropertyId) {
+      setActivePropertyId(allProperties[0].id);
+    }
 
     const interval = setInterval(() => {
       setActivePropertyId((prevId) => {
@@ -150,7 +153,7 @@ export default function KmlMap({
     }, 3500); // Cycle every 3.5 seconds
 
     return () => clearInterval(interval);
-  }, [property, allProperties]);
+  }, [property, allProperties, isPropertyPopupOpen]);
 
   // Imperatively open active property tooltip and pan map on global map
   useEffect(() => {

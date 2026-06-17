@@ -12,6 +12,7 @@ import { Property } from '../types';
 import { TestimonialsColumn } from '../components/ui/testimonials-columns-1';
 import { formatRupee } from '../utils';
 import MortgageCalculator from '../components/MortgageCalculator';
+import KmlMap from '../components/KmlMap';
 
 interface HomeProps {
   setActivePage: (page: string) => void;
@@ -572,6 +573,35 @@ export default function Home({ setActivePage, setBuyFilters, onViewProperty, onV
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+
+          {/* Interactive Property Map for Featured Properties */}
+          <div className="mt-16">
+            <ScrollReveal>
+              <div className="bg-white border border-[#D2D2D7]/50 rounded-2xl overflow-hidden shadow-xs">
+                <div className="p-6 md:p-8 border-b border-[#D2D2D7]/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <span className="text-[9px] uppercase font-bold tracking-widest text-[#B08968]">
+                      Interactive Map
+                    </span>
+                    <h3 className="text-xl font-display font-bold text-[#1D1D1F] mt-1">
+                      Featured Residences Locations
+                    </h3>
+                    <p className="text-xs text-[#6E6E73] mt-1">
+                      Explore the physical coordinates and neighborhood details of our premier properties.
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <KmlMap
+                    allProperties={featuredProperties}
+                    height="450px"
+                    showAmenities={true}
+                    onEnquiryClick={onEnquiryClick}
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
